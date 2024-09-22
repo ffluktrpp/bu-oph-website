@@ -417,3 +417,108 @@ body {
     text-align: center;
     font-size: 60px;
 }
+
+.card-row {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin: 20px 0 60px 0;
+}
+
+.partner-card img {
+    width: 320px;
+    border-radius: 8px;
+}
+
+.partner-card {
+    transition: all 0.3s ease-in-out;
+}
+
+.partner-card:hover img {
+    animation: rotate 0.3s ease-in-out 0s 1 normal forwards;
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate(0);
+		transform-origin: left;
+	}
+
+	100% {
+		transform: rotate(4deg);
+		transform-origin: right;
+	}
+}
+
+.element-animate {
+    position: absolute;
+    top: 15%;
+    left: 80%;
+    transition: all 0.3s ease-in;
+    animation: shake 2s ease-in-out 0s infinite normal forwards;
+}
+
+@keyframes shake {
+	0%,
+	100% {
+		transform: rotate(0deg);
+		transform-origin: 50% 100%;
+	}
+
+	10% {
+		transform: rotate(2deg);
+	}
+
+	20%,
+	40%,
+	60% {
+		transform: rotate(-4deg);
+	}
+
+	30%,
+	50%,
+	70% {
+		transform: rotate(4deg);
+	}
+
+	80% {
+		transform: rotate(-2deg);
+	}
+
+	90% {
+		transform: rotate(2deg);
+	}
+}
+
+.star-1 {
+    position: absolute;
+    top: 150%;
+    left: 80%;
+    transition: all 0.3s ease-in;
+    animation: shake 2s ease-in-out 0s infinite normal forwards;
+}
+
+.star-2 {
+    position: absolute;
+    top: 140%;
+    right: 80%;
+    transition: all 0.3s ease-in;
+    animation: shake 2s ease-in-out 0s infinite normal forwards;
+}
+
+.star-3 {
+    position: absolute;
+    top: 20%;
+    left: 75%;
+    transition: all 0.3s ease-in;
+    animation: shake 3s ease-in-out 0s infinite normal forwards;
+}
+
+.star-4 {
+    position: absolute;
+    width: 200px;
+    top: 15%;
+    left: 75%;
+    transition: all 0.3s ease-in;
+    animation: shake 3s ease-in-out 0s infinite normal forwards;
+}
