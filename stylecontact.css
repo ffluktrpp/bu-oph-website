@@ -6,19 +6,26 @@
             background: linear-gradient(to bottom, black 80%, #f89309 20%); /* เปลี่ยนสีที่ต้องการ */
         }
 
-        .center-text {
+        .center-text{
             text-align: center;
             font-size: 80px;
             font-family: 'Prompt', sans-serif;
             margin: 20px 0; /* เพิ่มระยะห่างบนและล่าง */
+            border-radius: 20px;
 
         }
         
+        .center-text img{
+            border-radius: 20px;
+
+        }
+
         .bangkoktext {
             text-align: center;
             font-size: 30px;
             font-family: 'Prompt', sans-serif;
             margin: 20px 0; /* เพิ่มระยะห่างบนและล่าง */
+            border-radius: 20px;
         }
 
         .textcon {
