@@ -1,5 +1,5 @@
 
-        /* register style */
+        /* register faq */
         
         body {
             height: 100vh; /* ทำให้พื้นหลังเต็มหน้าจอ */
@@ -27,8 +27,8 @@
         .open-popup {
             width: 550px; /* กำหนดความกว้างของปุ่ม */
             height: 90px; /* กำหนดความสูงของปุ่ม */
-            background-color: white; /* สีพื้นหลังเป็นสีขาว */
-            color: #000000; /* สีของตัวอักษร */
+            background-color: black; /* สีพื้นหลังเป็นสีขาว */
+            color: #ffffff; /* สีของตัวอักษร */
             border: 2px solid #ffffff; /* ขอบสีฟ้า */
             cursor: pointer;
             font-size: 18px; /* ขนาดตัวอักษร */

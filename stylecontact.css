@@ -1,0 +1,42 @@
+        /* register contact */
+        
+        body {
+            height: 100vh; /* ทำให้พื้นหลังเต็มหน้าจอ */
+            margin: 0;
+            background: linear-gradient(to bottom, black 80%, #f89309 20%); /* เปลี่ยนสีที่ต้องการ */
+        }
+
+        .center-text {
+            text-align: center;
+            font-size: 80px;
+            font-family: 'Prompt', sans-serif;
+            margin: 20px 0; /* เพิ่มระยะห่างบนและล่าง */
+
+        }
+        
+        .bangkoktext {
+            text-align: center;
+            font-size: 30px;
+            font-family: 'Prompt', sans-serif;
+            margin: 20px 0; /* เพิ่มระยะห่างบนและล่าง */
+        }
+
+        .textcon {
+            text-align: center;
+            font-size: 20px;
+            font-family: 'Prompt', sans-serif;
+            margin: 20px 0; /* เพิ่มระยะห่างบนและล่าง */
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center; /* จัดกลางในแนวนอน */
+            align-items: center; /* จัดกลางในแนวตั้ง */
+            gap: 20px; /* ระยะห่างระหว่างข้อความ */
+            margin: 20px 0; /* เว้นระยะห่างด้านบนและล่าง */
+        }
+
+        .contact-info div {
+            /* ไม่ต้องใช้ border หรือ background จะไม่แสดงตาราง */
+        }
+        
