@@ -2,51 +2,46 @@
         /* register faq */
         
         body {
-            height: 100vh; /* ทำให้พื้นหลังเต็มหน้าจอ */
+            height: 100vh;
             margin: 0;
-            background: linear-gradient(to bottom, black 80%, #3723fb 20%); /* เปลี่ยนสีที่ต้องการ */
+            background: linear-gradient(to bottom, black 80%, #3723fb 20%);
         }
 
         .center-text {
             text-align: center;
             font-size: 80px;
             font-family: 'Prompt', sans-serif;
-            margin: 20px 0; /* เพิ่มระยะห่างบนและล่าง */
+            margin: 20px 0;
         }
 
-
-        /* สไตล์สำหรับการจัดวางปุ่มให้อยู่ในบรรทัดเดียวกันและจัดตรงกลาง */
         .button-container {
             display: flex;
-            justify-content: center; /* จัดให้อยู่ตรงกลางแนวนอน */
-            align-items: center; /* จัดให้อยู่ตรงกลางแนวตั้ง */
+            justify-content: center;
+            align-items: center;
             margin-top: 50px;
         }
 
-        /* สไตล์สำหรับปุ่ม */
         .open-popup {
-            width: 550px; /* กำหนดความกว้างของปุ่ม */
-            height: 90px; /* กำหนดความสูงของปุ่ม */
-            background-color: black; /* สีพื้นหลังเป็นสีขาว */
-            color: #ffffff; /* สีของตัวอักษร */
-            border: 2px solid #ffffff; /* ขอบสีฟ้า */
+            width: 550px;
+            height: 90px;
+            background-color: black;
+            color: #ffffff;
+            border: 2px solid #ffffff;
             cursor: pointer;
-            font-size: 18px; /* ขนาดตัวอักษร */
-            font-family: 'Prompt', sans-serif; /* ฟอนต์ Prompt */
-            border-radius: 8px; /* ความโค้งมนของปุ่ม */
-            margin: 0 10px; /* ช่องว่างระหว่างปุ่ม */
-            text-align: center; /* จัดตัวอักษรให้อยู่ตรงกลาง */
-            line-height: 50px; /* จัดให้ตัวอักษรอยู่ตรงกลางในแนวตั้ง */
+            font-size: 18px;
+            font-family: 'Prompt', sans-serif;
+            border-radius: 8px;
+            margin: 0 10px;
+            text-align: center;
+            line-height: 50px;
             transition: background-color 0.3s ease, color 0.3s ease;
         }
 
-        /* เพิ่มเอฟเฟกต์เมื่อ hover ปุ่ม */
         .open-popup:hover {
             background-color: #3723fb;
             color: white;
         }
 
-        /* สไตล์สำหรับ Pop-up */
         .popup {
             opacity: 0;
             visibility: hidden;
@@ -66,25 +61,25 @@
         }
 
         .popup-icon {
-            width: 200px; /* ปรับขนาดไอคอนตามต้องการ */
-            margin-left: auto; /* ทำให้ไอคอนอยู่ชิดขวา */
-            display: inline-block; /* ให้ไอคอนอยู่ในบรรทัดเดียวกับ text */
-            animation: shake 0.5s infinite alternate; /* เพิ่ม animation shake */
-            vertical-align: middle; /* จัดตำแหน่งแนวตั้งให้ตรงกลาง */
+            width: 200px;
+            margin-left: auto;
+            display: inline-block;
+            animation: shake 0.5s infinite alternate;
+            vertical-align: middle;
         }
         
         @keyframes shake {
             0% { transform: translateX(0); }
-            100% { transform: translateX(10px); } /* ขยับไปทางขวา */
+            100% { transform: translateX(10px); }
         }
         .popup h2 {
-            color: black; /* สีตัวอักษรเป็นสีดำ */
+            color: black;
             margin-top: 20px;
         }
         
         .popup p {
-            color: black; /* สีตัวอักษรเป็นสีดำ */
-            text-align: left; /* ชิดซ้าย */
+            color: black;
+            text-align: left;
             margin-top: 10px;
             margin-bottom: 20px; 
         }
@@ -108,11 +103,10 @@
             }
         }
 
-        /* ปุ่มปิด Pop-up */
         .close-popup {
             position: absolute;
-            top: 10px; /* ระยะห่างจากด้านบน */
-            right: 10px; /* ระยะห่างจากด้านขวา */
+            top: 10px;
+            right: 10px;
             margin-top: 10px;
             padding: 5px 10px;
             background-color: red;
@@ -122,7 +116,6 @@
             font-family: 'Prompt', sans-serif;
         }
 
-        /* พื้นหลังที่ทำให้มืดเมื่อเปิด Pop-up */
         .overlay {
             opacity: 0;
             visibility: hidden;

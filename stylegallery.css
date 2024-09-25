@@ -1,7 +1,7 @@
         /* register gallery */
         
         body {
-            height: 100vh; /* ทำให้พื้นหลังเต็มหน้าจอ */
+            height: 100vh;
             margin: 0;
             background-color: #161616;
         }
@@ -10,23 +10,22 @@
             text-align: center;
             font-size: 80px;
             font-family: 'Prompt', sans-serif;
-            margin: 20px 0; /* เพิ่มระยะห่างบนและล่าง */
-
+            margin: 20px 0;
 }
 
 .image-grid {
     display: grid;
-    grid-template-columns: repeat(4, 200px); /* 3 รูปต่อบรรทัด ขนาดแต่ละรูปภาพ 200px */
-    gap: 50px 250px; /* ระยะห่างระหว่างรูปภาพ */
-    justify-content: center; /* จัดรูปให้อยู่กลางแนวนอน */
-    align-content: center; /* จัดรูปให้อยู่กลางแนวตั้ง */
+    grid-template-columns: repeat(4, 200px); 
+    gap: 50px 250px;
+    justify-content: center;
+    align-content: center;
     padding-right: 200px;
 }
 
 .image-grid img {
-    width: 400px; /* กำหนดความกว้างให้เท่ากัน */
-    height: 300px; /* กำหนดความสูงให้เท่ากัน */
-    object-fit: cover; /* ทำให้ภาพครอบคลุมพื้นที่โดยไม่เสียสัดส่วน */
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
     border-radius: 20px;
 }
 
