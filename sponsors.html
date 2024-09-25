@@ -15,7 +15,12 @@
             <a href="index.html" class="logo">
                 <span>Let's Play Like A Pro</span>
             </a>
-            <nav class="navbar">
+            <div class="hamburger" id="hamburger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <nav class="navbar" id="navbar">
                 <ul class="nav">
                     <!-- About Menu -->
                     <li class="nav-item">
@@ -143,5 +148,30 @@
         </div>
       </footer>
       <!-- End Footer -->
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('hamburger');
+            const navbar = document.getElementById('navbar');
+            const navItems = document.querySelectorAll('.nav-item');
+  
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navbar.classList.toggle('active');
+            });
+  
+            navItems.forEach(item => {
+                const link = item.querySelector('.nav-link');
+  
+                link.addEventListener('click', (e) => {
+                    navItems.forEach(i => {
+                        if (i !== item) {
+                            i.classList.remove('active'); // ปิด dropdown menu ของเมนูอื่น
+                        }
+                    });
+                    item.classList.toggle('active'); // เปิด/ปิด dropdown menu ของเมนูที่ถูกคลิก
+                });
+            });
+        });
+      </script>
 </body>
 </html>

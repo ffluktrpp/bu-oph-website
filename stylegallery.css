@@ -1,32 +1,46 @@
-        /* register gallery */
-        
-        body {
-            height: 100vh; /* ทำให้พื้นหลังเต็มหน้าจอ */
-            margin: 0;
-            background-color: #161616;
-        }
+body {
+    height: 100vh;
+    margin: 0;
+    background-color: #161616;
+}
 
-        .center-text {
-            text-align: center;
-            font-size: 80px;
-            font-family: 'Prompt', sans-serif;
-            margin: 20px 0; /* เพิ่มระยะห่างบนและล่าง */
-
+.center-text {
+    text-align: center;
+    font-size: 80px;
+    font-family: 'Prompt', sans-serif;
+    margin: 20px 0;
 }
 
 .image-grid {
     display: grid;
-    grid-template-columns: repeat(4, 200px); /* 3 รูปต่อบรรทัด ขนาดแต่ละรูปภาพ 200px */
-    gap: 50px 250px; /* ระยะห่างระหว่างรูปภาพ */
-    justify-content: center; /* จัดรูปให้อยู่กลางแนวนอน */
-    align-content: center; /* จัดรูปให้อยู่กลางแนวตั้ง */
-    padding-right: 200px;
+    grid-template-columns: repeat(4, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
 }
 
 .image-grid img {
-    width: 400px; /* กำหนดความกว้างให้เท่ากัน */
-    height: 300px; /* กำหนดความสูงให้เท่ากัน */
-    object-fit: cover; /* ทำให้ภาพครอบคลุมพื้นที่โดยไม่เสียสัดส่วน */
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
     border-radius: 20px;
 }
 
+@media (max-width: 768px) {
+    .image-grid {
+        grid-template-columns: repeat(1, minmax(350px, 1fr));
+        justify-items: center;
+        align-items: center;
+    }
+
+    .image-grid img {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+    }
+
+    .center-text {
+        font-size: 28px;
+        font-weight: 600;
+    }
+}
