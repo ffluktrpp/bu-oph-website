@@ -73,10 +73,6 @@ body {
     font-size: 12px;
 }
 
-.dropdown-menu li{
-    display: block;
-}
-
 .dropdown-menu{
     width: 100%;
     background-color: #f0f0f0;
@@ -99,6 +95,7 @@ body {
 }
 
 .dropdown-menu li {
+    display: block;
     padding: 10px 15px;
     border-bottom: 1px solid #eee;
     border-radius: 5px;
@@ -134,7 +131,7 @@ body {
   
 .hero {
     background-color: rgb(255, 251, 199);
-    padding: 50px 0px 150px 0px;
+    padding: 50px 0px 100px 0px;
 }
 
 .header-events {
@@ -183,7 +180,6 @@ body {
 
 .hero-info {
     display: flex;
-    width: 1200px;
     margin: 0 auto;
 }
 
@@ -963,5 +959,138 @@ body {
 @media (max-width: 768px) {
     .bento-container {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        position: fixed;
+        top: 7%;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background-color: #333;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        transition: 0.3s ease;
+        z-index: 1000;
+    }
+
+    .navbar.active {
+        right: 0%;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 10px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -10px);
+    }
+
+    .hero {
+        justify-items: center;
+    }
+
+    .hero-info {
+        display: flex;     
+        flex-direction: column;
+        align-items: center;     
+        height: 80vh;
+        margin: 0 auto;
+    }
+    
+    .hero-info img {
+        width: 300px;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .header-events h1 {
+        font-size: 26px;
+    }
+    
+    .hero-text {
+        width: 400px;
+        font-size: 20px;
+        padding: 20px;
+        margin: 10px 0 0 0;
+    }
+
+    .star-1,.star-2,.star-3,.star-4,.element-animate {
+        display: none;
+    }
+
+    .card-container {
+        text-align: center;
+    }
+
+    .txt-copyright {
+        font-size: 16px;
+    }
+
+    .footer a span{
+        display: none;
+    }
+
+    .about-info p {
+        font-size: 16px;
+    }
+
+    .workshop-card {
+        width: 400px;
+        height: 260px;
+    }
+    .interest-btn {
+        display: none;
+    }
+
+    .card-front,.card-back {
+        font-size: 14px;
+    }
+    
+    .card-back:hover {
+        width: 400px;
+        height: 40px;
+    }
+
+    .card-row {
+        display: block;
+        margin: 0 0 20px 0;
+    }
+
+    .partner-card {
+        margin: 0 0 20px 0;
+    }
+}
+
+@media (min-width: 769px) {
+    .hero-info {
+        padding: 0 350px 0 350px;
     }
 }

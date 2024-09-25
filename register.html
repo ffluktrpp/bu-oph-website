@@ -16,7 +16,12 @@
             <a href="index.html" class="logo">
                 <span>Let's Play Like A Pro</span>
             </a>
-            <nav class="navbar">
+            <div class="hamburger" id="hamburger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <nav class="navbar" id="navbar">
                 <ul class="nav">
                     <!-- About Menu -->
                     <li class="nav-item">
@@ -59,12 +64,18 @@
     </div>
         <!-- Navbar Ends -->
 
-    <div class="center-text">
-      BU OPEN HOUSE 2024
+    <div class="header-container">
+      <div class="center-text">
+        BU OPEN HOUSE 2024
+      </div>
+      <h1 class="faculty-txt">Information Technology and Innovation</h1>
     </div>
-
+    
     <div class="square-box">
+<<<<<<< HEAD
 
+=======
+>>>>>>> 23122ed48a177aedea4fef633c02aff9c9eb0ff9
       <label class="label">Name</label>
       <input type="name" placeholder="ใส่ชื่อนามสกุล" required>
       <label class="label">Nickname</label>
@@ -77,6 +88,12 @@
     </div>
 
     <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
     <!-- Footer -->
     <footer class="footer">
       <div class="txt-copyright">© 2024 ffxptan, Inc</div>
@@ -93,5 +110,30 @@
       </div>
     </footer>
     <!-- End Footer -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+          const hamburger = document.getElementById('hamburger');
+          const navbar = document.getElementById('navbar');
+          const navItems = document.querySelectorAll('.nav-item');
+
+          hamburger.addEventListener('click', () => {
+              hamburger.classList.toggle('active');
+              navbar.classList.toggle('active');
+          });
+
+          navItems.forEach(item => {
+              const link = item.querySelector('.nav-link');
+
+              link.addEventListener('click', (e) => {
+                  navItems.forEach(i => {
+                      if (i !== item) {
+                          i.classList.remove('active'); // ปิด dropdown menu ของเมนูอื่น
+                      }
+                  });
+                  item.classList.toggle('active'); // เปิด/ปิด dropdown menu ของเมนูที่ถูกคลิก
+              });
+          });
+      });
+    </script>
 </body>
 </html>

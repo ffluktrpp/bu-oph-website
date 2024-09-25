@@ -1,49 +1,63 @@
-        /* register contact */
-        
-        body {
-            height: 100vh; /* ทำให้พื้นหลังเต็มหน้าจอ */
-            margin: 0;
-            background: linear-gradient(to bottom, black 80%, #f89309 20%); /* เปลี่ยนสีที่ต้องการ */
-        }
+body {
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to bottom, black 70%, #f89309 30%);
+}
 
-        .center-text{
-            text-align: center;
-            font-size: 80px;
-            font-family: 'Prompt', sans-serif;
-            margin: 20px 0; /* เพิ่มระยะห่างบนและล่าง */
-            border-radius: 20px;
+.center-text {
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Prompt', sans-serif;
+    margin: 20px 0;
+    border-radius: 20px;
+}
 
-        }
-        
-        .center-text img{
-            border-radius: 20px;
+.center-text img {
+    border-radius: 20px;
+    width: 100%;
+    max-width: 600px;
+}
 
-        }
+.bangkoktext {
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Prompt', sans-serif;
+    margin: 20px 0;
+    border-radius: 20px;
+}
 
-        .bangkoktext {
-            text-align: center;
-            font-size: 30px;
-            font-family: 'Prompt', sans-serif;
-            margin: 20px 0; /* เพิ่มระยะห่างบนและล่าง */
-            border-radius: 20px;
-        }
+.textcon {
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Prompt', sans-serif;
+    margin: 20px 0;
+    padding: 0 20px;
+}
 
-        .textcon {
-            text-align: center;
-            font-size: 20px;
-            font-family: 'Prompt', sans-serif;
-            margin: 20px 0; /* เพิ่มระยะห่างบนและล่าง */
-        }
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+}
 
-        .contact-info {
-            display: flex;
-            justify-content: center; /* จัดกลางในแนวนอน */
-            align-items: center; /* จัดกลางในแนวตั้ง */
-            gap: 20px; /* ระยะห่างระหว่างข้อความ */
-            margin: 20px 0; /* เว้นระยะห่างด้านบนและล่าง */
-        }
+@media (max-width: 768px) {
+    .center-text {
+        font-size: 24px;
+        font-weight: 600;
+    }
 
-        .contact-info div {
-            /* ไม่ต้องใช้ border หรือ background จะไม่แสดงตาราง */
-        }
-        
+    .contact-info {
+        flex-direction: column;
+        gap: 10px;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .bangkoktext, .textcon {
+        font-size: 1rem;
+        text-align: center;
+    }
+}
