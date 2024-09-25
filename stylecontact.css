@@ -1,7 +1,7 @@
 body {
     height: 100vh;
     margin: 0;
-    background: linear-gradient(to bottom, black 70%, #f89309 30%);
+    background: linear-gradient(to bottom, black 80%, #f89309 20%);
 }
 
 .center-text {
@@ -15,7 +15,7 @@ body {
 .center-text img {
     border-radius: 20px;
     width: 100%;
-    max-width: 600px;
+    max-width: 1000px;
 }
 
 .bangkoktext {
@@ -36,12 +36,13 @@ body {
 
 .contact-info {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row; /* จัดเรียงในแนวนอน */
+    justify-content: center; /* จัดกึ่งกลาง */
     align-items: center;
-    gap: 10px;
+    gap: 20px; /* ช่องว่างระหว่างแต่ละบรรทัด */
     margin: 20px 0;
 }
+
 
 @media (max-width: 768px) {
     .center-text {
