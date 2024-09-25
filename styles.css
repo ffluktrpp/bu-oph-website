@@ -1,4 +1,4 @@
-/* Reset styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -8,7 +8,7 @@
 
 body {
     font-family: 'Prompt', sans-serif;
-    background-color: #111; /* Dark background to make colors pop */
+    background-color: #111;
     color: #ffffff;
     background: linear-gradient(to right, #040404, #000000);
     font-family: 'Prompt', sans-serif;
@@ -521,6 +521,44 @@ body {
     animation: shake 3s ease-in-out 0s infinite normal forwards;
 }
 
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+.title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+.page-title {
+    font-size: 3em;
+    color: #333;
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rgb-shift 15s linear infinite;
+}
+@keyframes rgb-shift {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+}
+
 .schedule-section {
     padding: 40px 20px;
     max-width: 1200px;
@@ -582,12 +620,6 @@ body {
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
 }
 
-@media (min-width: 768px) {
-    .schedule-day {
-        width: calc(33.33% - 20px);
-    }
-}
-
 .schedule-day h2 {
     padding: 15px;
     margin: 0;
@@ -642,16 +674,6 @@ body {
 .schedule-table tr:hover {
     background-color: rgba(255, 255, 255, 0.1);
     transition: background-color 0.3s ease;
-}
-
-@media (max-width: 768px) {
-    .schedule-container {
-        flex-direction: column;
-    }
-    
-    .schedule-day {
-        width: 100%;
-    }
 }
 
 .student-section {
@@ -735,21 +757,9 @@ body {
     color: #333;  /* Dark gray for slightly softer contrast */
 }
 
-@media (max-width: 768px) {
-    .student-box {
-        width: 100%;
-    }
-}
-
-body {
-    background: #000;
-    color: #ffffff;
-    font-family: 'Prompt', sans-serif;
-}
-
 .flipcard-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
     padding: 20px;
 }
@@ -879,12 +889,6 @@ body {
     text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
 }
 
-@media (max-width: 768px) {
-    .flipcard-container {
-        grid-template-columns: 1fr;
-    }
-}
-
 .bento-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -953,24 +957,6 @@ body {
 
 .bento-box {
     animation: rgb-shift 15s linear infinite;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .bento-container {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.hamburger span {
-    height: 3px;
-    width: 25px;
-    background-color: white;
-    margin: 4px 0;
-    transition: 0.4s;
 }
 
 @media (max-width: 768px) {
@@ -1087,10 +1073,34 @@ body {
     .partner-card {
         margin: 0 0 20px 0;
     }
+
+    .flipcard-container {
+        grid-template-columns: 1fr;
+    }
+
+    .student-box {
+        width: 100%;
+    }
+
+    .schedule-container {
+        flex-direction: column;
+    }
+    
+    .schedule-day {
+        width: 100%;
+    }
+
+    .title-container h1 {
+        font-size: 30px;
+    }
 }
 
 @media (min-width: 769px) {
     .hero-info {
         padding: 0 350px 0 350px;
+    }
+
+    .schedule-day {
+        width: calc(33.33% - 20px);
     }
 }
