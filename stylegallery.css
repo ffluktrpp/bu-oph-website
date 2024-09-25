@@ -1,0 +1,32 @@
+        /* register gallery */
+        
+        body {
+            height: 100vh; /* ทำให้พื้นหลังเต็มหน้าจอ */
+            margin: 0;
+            background-color: #161616;
+        }
+
+        .center-text {
+            text-align: center;
+            font-size: 80px;
+            font-family: 'Prompt', sans-serif;
+            margin: 20px 0; /* เพิ่มระยะห่างบนและล่าง */
+
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 200px); /* 3 รูปต่อบรรทัด ขนาดแต่ละรูปภาพ 200px */
+    gap: 50px 250px; /* ระยะห่างระหว่างรูปภาพ */
+    justify-content: center; /* จัดรูปให้อยู่กลางแนวนอน */
+    align-content: center; /* จัดรูปให้อยู่กลางแนวตั้ง */
+    padding-right: 200px;
+}
+
+.image-grid img {
+    width: 400px; /* กำหนดความกว้างให้เท่ากัน */
+    height: 300px; /* กำหนดความสูงให้เท่ากัน */
+    object-fit: cover; /* ทำให้ภาพครอบคลุมพื้นที่โดยไม่เสียสัดส่วน */
+    border-radius: 20px;
+}
+

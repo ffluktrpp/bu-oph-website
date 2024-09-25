@@ -7,6 +7,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>BU Open House 2024</title>
+    <style>
+        .title-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px; /* Adjust this value to move the title up or down */
+        }
+        .page-title {
+            font-size: 3em;
+            color: #333;
+            text-align: center;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: rgb-shift 15s linear infinite;
+        }
+        @keyframes rgb-shift {
+            0% { filter: hue-rotate(0deg); }
+            100% { filter: hue-rotate(360deg); }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -22,10 +47,10 @@
                         <a href="about.html" class="nav-link">About &#9662;</a>
                         <ul class="dropdown-menu">
                             <li><a href="about.html">เกี่ยวกับงาน Open House</a></li>
-                            <li><a href="schedule.html">ตารางกิจกรรม</a></li>
+                            <li><a href="schedule.html">ตาางกิจกรรม</a></li>
                             <li><a href="speakers.html">ข้อมูลวิทยากร</a></li>
                             <li><a href="workshop.html">เวิร์กช็อปและกิจกรรม</a></li>
-                            <li><a href="sponsors.html">ผู้สนับสนุนและพาร์ทเนอร์</a></li>
+                            <li><a href="sponsors.html">ผู้สนับส��ุนและพาร์ทเนอร์</a></li>
                         </ul>
                     </li>
                     <!-- News Menu -->
@@ -54,12 +79,61 @@
                     </li>
                 </ul>
             </nav>
+
+            <!-- Styles moved to styles.css -->
+            
+                       
         </header>
     </div>
         <!-- Navbar Ends -->
 
-        <!-- Start coding after here -->
-        <div>Hello</div>
+    <!-- Add the title here, centered and lower -->
+    <div class="title-container">
+        <h1 class="page-title">BU News 2024</h1>
+    </div>
+
+    <!-- Start coding after here -->
+    <div class="bento-container">
+      <div class="bento-box">
+        <h3>New Data Science Lab Opens at Bangkok University</h3>
+        <p>Bangkok University has inaugurated a state-of-the-art Data Science Lab to support its bachelor program in Data Science. The lab features cutting-edge hardware and software for big data analysis and machine learning projects.</p>
+      </div>
+      
+      <div class="bento-box">
+        <h3>Data Science Students Win National Hackathon</h3>
+        <p>A team of undergraduate Data Science students from Bangkok University has won first place in the National Data Innovation Hackathon. Their project focused on using AI to optimize public transportation in Bangkok.</p>
+      </div>
+      
+      <div class="bento-box">
+        <h3>Industry Partnerships Boost Data Science Program</h3>
+        <p>Bangkok University's Data Science program has partnered with leading tech companies to offer internships and real-world projects to students. This collaboration aims to bridge the gap between academia and industry needs.</p>
+      </div>
+      
+      <div class="bento-box">
+        <h3>Data Science Curriculum Updated for 2024</h3>
+        <p>The Bachelor of Science in Data Science program at Bangkok University has undergone a major curriculum update. New courses in deep learning, natural language processing, and data ethics have been added to keep pace with industry trends.</p>
+      </div>
+
+      <div class="bento-box">
+        <h3>Bangkok University Hosts International Data Science Conference</h3>
+        <p>The university is set to host its first International Conference on Data Science and AI Applications next month. Renowned speakers from around the world will present cutting-edge research and industry applications.</p>
+      </div>
+
+      <div class="bento-box">
+        <h3>Data Science Alumni Secure Top Positions in Tech Industry</h3>
+        <p>Recent graduates from Bangkok University's Data Science program have been hired by leading tech companies, including Google, Amazon, and local unicorns. This success highlights the program's effectiveness in preparing students for the job market.</p>
+      </div>
+
+      <div class="bento-box">
+        <h3>New Scholarship Program for Women in Data Science</h3>
+        <p>Bangkok University announces a new scholarship program aimed at encouraging more women to pursue careers in Data Science. The program will cover full tuition and provide mentorship opportunities with successful women in the field.</p>
+      </div>
+
+      <div class="bento-box">
+        <h3>Data Science Department Launches Community Outreach Program</h3>
+        <p>In an effort to promote data literacy, the Data Science department at Bangkok University is launching a series of free workshops for local businesses and community organizations. These workshops will cover basic data analysis and visualization techniques.</p>
+      </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
